@@ -1,5 +1,5 @@
-import { context as globalContext, trace } from "@opentelemetry/api";
-import type { Context, Exception, Link, Span, SpanAttributes, SpanAttributeValue, SpanContext, SpanOptions, SpanStatus, TimeInput, Tracer } from "@opentelemetry/api";
+import { context as globalContext } from "@opentelemetry/api";
+import type { Context, Exception, Link, Span, SpanAttributes, SpanAttributeValue, SpanContext, SpanStatus, TimeInput, } from "@opentelemetry/api";
 import { isPromiseLike } from "./isPromiseLike.ts";
 
 interface IAsyncDisposableEnd extends AsyncDisposable {
