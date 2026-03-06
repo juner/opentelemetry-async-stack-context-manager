@@ -261,6 +261,10 @@ describe("AsyncStackContextManager", ({ beforeEach, afterEach }) => {
       await promise;
     });
   });
+
+  it('.toString()', () => {
+    assert.equal(contextManager.toString(), "[object AsyncStackContextManager]");
+  });
 });
 
 /**

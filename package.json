@@ -5,8 +5,11 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -16,6 +19,16 @@
       "require": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.cjs"
+      }
+    },
+    "./tool" : {
+      "import": {
+        "types": "./dist/tool/index.d.ts",
+        "default": "./dist/tool/index.mjs"
+      },
+      "require": {
+        "types": "./dist/tool/index.d.ts",
+        "default": "./dist/tool/index.cjs"
       }
     }
   },
