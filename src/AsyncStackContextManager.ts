@@ -94,4 +94,7 @@ export class AsyncStackContextManager implements ContextManager {
     }
   }
   
+  get [Symbol.toStringTag]() {
+    return "AsyncStackContextManager";
+  }
 }
