@@ -5,8 +5,11 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -15,7 +18,17 @@
       },
       "require": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.umd.cjs"
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./tool" : {
+      "import": {
+        "types": "./dist/tool/index.d.ts",
+        "default": "./dist/tool/index.mjs"
+      },
+      "require": {
+        "types": "./dist/tool/index.d.ts",
+        "default": "./dist/tool/index.cjs"
       }
     }
   },
@@ -38,7 +51,9 @@
   ],
   "author": "juners",
   "license": "MIT",
-  "engines": {},
+  "engines": {
+    "node": ">=24.x"
+  },
   "bugs": {
     "url": "https://github.com/juner/disposable-lock/issues"
   },
